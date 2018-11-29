@@ -11,5 +11,6 @@ public class App {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		Coach coach = context.getBean("coach", Coach.class);
 		System.out.println(coach.getDailyWorkout());
+		System.out.println(coach.getDailyFortune());
 	}
 }
