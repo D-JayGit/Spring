@@ -6,8 +6,9 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
-    <bean id="coach" class="spring.spring_demo.BaseballCoach" >
-       <constructor-arg ref="fortune"/>
-    </bean>
     <bean id="fortune" class="spring.spring_demo.HappyFortuneService"/>
+    <bean id="coach" class="spring.spring_demo.BaseballCoach" >
+       <!--  <constructor-arg ref="fortune"/>-->
+       <property name="service" ref="fortune"></property>
+    </bean>
 </beans>

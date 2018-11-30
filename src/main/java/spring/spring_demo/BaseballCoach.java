@@ -4,6 +4,10 @@ public class BaseballCoach implements Coach {
 
 	HappyFortuneService service;
 	
+	public BaseballCoach() {
+	
+	}
+
 	public BaseballCoach(HappyFortuneService service) {
 		super();
 		this.service = service;
@@ -19,6 +23,12 @@ public class BaseballCoach implements Coach {
 		return service.getFortune();
 	}
 	
-	
+	public HappyFortuneService getService() {
+		return service;
+	}
+
+	public void setService(HappyFortuneService service) {
+		this.service = service;
+	}
 
 }
